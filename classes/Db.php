@@ -18,12 +18,11 @@ class Db
         $db_data = Config::get('db_data');
         try
         {
-            $this->_pdo = new \PDO("mysql:host={$db_data['dbhost']};dbname={$db_data['dbname']}", $db_data['user'], $db_data['pass']);
+            $this->_pdo = new PDO("mysql:host={$db_data['dbhost']};dbname={$db_data['dbname']}", $db_data['user'], $db_data['pass']);
             $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch (PDOException $e)
         {
-            dbg($e->getMessage());
         }
     }
     public function rawPDO(){
@@ -45,22 +44,6 @@ class Db
         return self::$_inst;
     }
 
-    public function query($sql, $params = array())
-    {
-        $this->_error = false;
-        if ($this->_query = $this->_pdo->prepare($sql))
-        {
-            if (count($params))
-            {
-                $x = 1;
-                foreach ($params as $param)
-                {
-                    $this->_query->bindValue($x, $param);
-                    $x++;
-                }
-            }
-        }
-    }
 
     public function act($act, $tbl, $where = array())
     {

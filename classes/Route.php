@@ -12,10 +12,9 @@ use \classes\Config as Config;
         }
         private function _setController()
         {
-            $potentialClass = (!$_GET["controller"])? "Home" : ucfirst(escape($_GET['controller']));
-            $potentialSection = (file_exists(__CONTROLLER__.$potentialClass.".php"));
-            $this->_controller = ($_GET['controller'] && $potentialSection)? $potentialClass : "Home";
+            $potentialClass = is_file(__CONTROLLER__.$_GET['controller'].".php")?$_GET['controller']:'Home';
             unset($_GET['controller']);
+
 			$this->_controller =  $potentialClass;
             $this->_renderController();
         }

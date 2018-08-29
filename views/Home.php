@@ -1,15 +1,7 @@
-<div class='fluid-container'>
-    <div class="hero-image row">
-      <div class="hero-text">
-        <p>6th Sense Company</p>
-      </div>
-    </div>
-</div>
 <div class='container'>
-    <br><br>
+    <h2>Meet the Team</h2>
+    <br>
     <div class='row'>
-        <h2>Meet the Team</h2>
-        <br>
         <div class="col-md-12">
             <div class="blockquote-box clearfix">
                 <div class="square pull-left">

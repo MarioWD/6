@@ -2,6 +2,7 @@
 namespace controllers;
 use \classes\Config as Config;
 use \classes\Db as Db;
+use \PDO as PDO;
 class Controller
 {
 	protected $model, $page, $view, $get, $post, $viewable, $proccessable;
@@ -42,6 +43,17 @@ class Controller
 		$this->view = $this->page->getShortName();
 		$this->viewable = file_exists(__VIEW__.$this->view.".php");
 		$this->proccessable = file_exists(__PROCESS__.$this->view.".php");
+        if (isset($_SESSION['ui-hash']))
+        {
+            $db = Db::getInstance()->rawPDO();
+            $res = $db->query('SELECT * FROM users WHERE email=\''.$_SESSION['ui-mail'].'\' AND hash=\''.$_SESSION['ui-hash'].'\' AND role=1');
+            $res->execute();
+            $res = $res->fetch(PDO::FETCH_ASSOC);
+            if ($res)
+            {
+                $this->verify = 1;
+            }
+        }
 	}
 	private function loadView()
 	{
@@ -103,9 +115,12 @@ class Controller
 		{
 			foreach($_SESSION["msg"] as $type => $msgs)
 			{ ?>
-				<div class="row"><div class="col dsk-12 tbt-12 mob-12 alert-msg col-mt-10 col-mb-10 <?=$type?>"><div class="block-fill-space"><?=implode("<br>", $msgs)?></div></div></div>
-					<?php
-					unset($_SESSION["msg"]);
+                <div class="alert alert-<?=$type?> alert-dismissible" role="alert" style='margin-bottom: 30px;'>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <?=implode("<br>", $msgs)?>
+                </div>
+                <?php
+                unset($_SESSION["msg"]);
 			}
 		}
 	}

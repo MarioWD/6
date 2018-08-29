@@ -2,8 +2,17 @@ body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
 }   
+.hero-image-blogger {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../banners/blogger-banner.jpeg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 .hero-image-login {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/login-banner.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../banners/login-banner.jpeg");
     height: 500px;
     background-position: bottom;
     background-repeat: no-repeat;

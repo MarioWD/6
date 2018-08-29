@@ -18,7 +18,7 @@ define('_404', __VIEW__.'404.php');
 
 session_start();
 $GLOBALS['conf'] = [
-    'db_data' => false, 
+    'db_data' => ['dbhost'=>'localhost','dbname'=>'mariocf9_6_db','pass'=>'softdevdragons93','user'=>'mariocf9_dev'], 
     'tables' => false,
     'siteName' => "www.6thsense.co",
     'siteNameStyled' => "6thSense",
