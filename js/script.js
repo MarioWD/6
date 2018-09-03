@@ -22,7 +22,7 @@ $(function() {
             read.onload = function(e) {
                 var attrs = {
                     src: e.target.result,
-                    style: 'width:100%;'
+                    style: 'margin:auto;max-width:100%;'
                 };
                 var class_name = !prevActive?'item active':'item';
                 if (!prevActive) {prevActive = true;};

@@ -1,6 +1,7 @@
 body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
+    font-family: 'EXO2', Lato, sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }   
 .hero-image-blogger {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../banners/blogger-banner.jpeg");
