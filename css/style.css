@@ -83,11 +83,35 @@ body {
 }
 
 .column img {
-    margin-top: 8px;
     vertical-align: middle;
     max-width: 100%;
 }
+.calendar-selector {
+    padding: 60px 8px 0;
+    margin-bottom: -10px;
+    overflow: hidden;
+}
+.calendar-selector a {
+    transform: rotate(-45deg);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    width: 100px;
+    padding-left: 75px;
+    margin-right: -145px;
+    color: #000;
+    box-sizing: content-box;
+}
 
+.calendar-selector a:hover,
+.calendar-selector a.active {
+    background-color: #000;
+    color: #FFF;
+    text-decoration: none;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {

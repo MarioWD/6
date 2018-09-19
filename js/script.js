@@ -2,9 +2,31 @@ $(function() {
 
     var prevActive;
     var indi_i;
+
     $('#images').on('change', tempImage);
     $('#title').on('input', rewrite);
     $('#body').on('input', rewrite);
+    $('.js-month-sel').on('click', changeBlogMonth);
+
+    function changeBlogMonth(e) {
+        e.preventDefault();
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
+        var ajax = {
+            method: 'post',
+            data: $(this).data(),
+            url: '/Blogger',
+            success: monthBlogs,
+            dataType: 'html' 
+        };
+        $.ajax(ajax);
+    }
+    
+    function monthBlogs(data) {
+        $('.img-row').empty();
+        $('.img-row').append(data);
+    }
+
     function tempImage() {
         prevActive = false;
         prevActive = 0;
@@ -52,7 +74,6 @@ $(function() {
 
     function rewrite() {
         var new_title = $(this).val();
-        console.log($(this).data('target')); 
         $($(this).data('target')).text(new_title);
     }
 });

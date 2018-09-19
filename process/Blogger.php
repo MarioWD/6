@@ -1,4 +1,28 @@
 <?php
+if ($this->post['ajaxflag'] == 'month-changer')
+{
+    $res = $this->db->prepare("SELECT * FROM blog where UNIX_TIMESTAMP(timestamp) BETWEEN ? AND ?");
+    $res->execute([$this->post['start'], $this->post['end']]); 
+    $month_blogs = $res->fetchAll(PDO::FETCH_ASSOC);
+    ob_start();
+    ?>
+    <div class='column'>
+    <?php foreach ($month_blogs as $counter => $blog) { ?>
+        <?php $blog['images'] = unserialize($blog['images'])[0];?>
+            <a href='/Blog/?bi=<?=$blog['id']?>' class='js-blog-entry'><img src='<?=$blog['images']?>'/></a>
+        <?php if ($counter%$this->per_column == 0) { ?>
+            </div>
+            <div class='column'>
+        <?php } ?>
+    <?php } ?>
+    </div>
+    <?php
+    $html_blogs = ob_get_contents();
+    ob_end_clean();
+    echo $html_blogs;
+    exit();
+}
+
 $files = $_FILES['images'];
 $folder = 'images/';
 $types = [
