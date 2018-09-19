@@ -1,3 +1,4 @@
+<br><br>
 <div class='container'>
     <h2 id='gal-imgs' style='margin-bottom: -50px;'>Blogs</h2>
     <div class='calendar-selector'>
