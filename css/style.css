@@ -159,6 +159,14 @@ body {
     color: #FFF;
     text-decoration: none;
 }
+.carousel-inner>.item>img {
+    max-width: 100%;
+    max-height: 500px;
+    margin: auto;
+}
+.carousel-inner {
+    height: 500px;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {

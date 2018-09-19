@@ -10,7 +10,7 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner text-center">
             <?php foreach ($this->blog['images'] as $i => $image) { ?>
             <div class='item <?=$i?'':'active'?>'><img src='/<?=$image?>'/></div>
             <?php } ?>

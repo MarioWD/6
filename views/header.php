@@ -11,10 +11,6 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Home</a></li>
-            <?php if ($this->view == 'Home') { ?>
-            <li><a href="#gal-imgs">Gallery</a></li>
-            <?php } ?>
-
             <?php if (isset($_SESSION['ui-hash']) && isset($this->verify)) {?>
             <li><a href="/Imager">Imager</a></li>
             <li><a href="/Blogger">Blogger</a></li>
