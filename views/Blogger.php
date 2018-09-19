@@ -1,6 +1,5 @@
+<div class='container'><h2 id='titlerewrite'>Blog post preview</h2></div>
 <div class="container" id='slideshow_container' style='display:none;'>
-    <h2>Blog post preview</h2>
-    <br>
     <div id="myCarousel" class="carousel" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -24,11 +23,13 @@
     </div>
 </div>
 <br><br>
+<div id='blogbody' class='container text-center'></div>
+<br><br>
 <div class='container'>
     <form class='col-md-6 col-md-offset-3' method='post' enctype='multipart/form-data'>
         <div class='form-group form-group-lg'>
            <label for='title'>Title</label>
-           <input type='text' name='title' id='title' placeholder='Post Title' class='form-control'/>
+           <input type='text' name='title' id='title' data-target='#titlerewrite' placeholder='Post Title' class='form-control'/>
         </div>
         <br>
         <div class='form-group form-group-lg'>
@@ -39,7 +40,7 @@
         <br>
         <div class='form-group form-group-lg'>
            <label for='body'>Post Body</label>
-           <textarea name='body' id='body' placeholder='Post Body' class='form-control' rows='5'></textarea>
+           <textarea name='body' id='body' data-target='#blogbody' placeholder='Post Body' class='form-control' rows='5'></textarea>
         </div>
         <br>
         <div class='form-group form-group-lg'>

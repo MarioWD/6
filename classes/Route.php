@@ -15,7 +15,7 @@ use \classes\Config as Config;
             $potentialClass = is_file(__CONTROLLER__.$_GET['controller'].".php")?$_GET['controller']:'Home';
             unset($_GET['controller']);
 
-			$this->_controller =  $potentialClass;
+		$this->_controller =  $potentialClass;
             $this->_renderController();
         }
         private function _renderController()
