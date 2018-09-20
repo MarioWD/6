@@ -12,8 +12,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Home</a></li>
             <?php if (isset($_SESSION['ui-hash']) && isset($this->verify)) {?>
-            <li><a href="/Imager">Imager</a></li>
-            <li><a href="/Blogger">Blogger</a></li>
+            <li><a href="/Blogger">Blogs</a></li>
+            <li><a href="/Sections">Sections</a></li>
             <?php } else { ?>
             <li><a href="/Login">Login</a></li>
             <?php } ?>
@@ -21,7 +21,7 @@
         </div>
       </div>
     </nav>
-
+#4F7B8F
 </header>
 <main style='padding-top:50px;'>
 <?php if ($this->view == 'Home') { ?>

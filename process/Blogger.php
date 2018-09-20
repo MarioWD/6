@@ -9,7 +9,7 @@ if ($this->post['ajaxflag'] == 'month-changer')
     <div class='column'>
     <?php foreach ($month_blogs as $counter => $blog) { ?>
         <?php $blog['images'] = unserialize($blog['images'])[0];?>
-            <a data-title='<?=$blog['title']?>' href='/Blog/?bi=<?=$blog['id']?>' class='js-blog-entry'><img src='<?=$blog['images']?>'/></a>
+            <a data-title='<?=$blog['title']?>' href='/Blog/?bi=<?=$blog['id']?>' class='js-blog-entry'><img src='/<?=$blog['images']?>'/></a>
         <?php if ($counter%$this->per_column == 0) { ?>
             </div>
             <div class='column'>
