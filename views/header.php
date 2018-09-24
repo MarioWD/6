@@ -1,8 +1,8 @@
 <header class="">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <a href="/" class="navbar-left"><img src="/logo/black_logo.png" style='max-width: 62px;'></a>
         <div class="navbar-header">
+            <a href="/" class="navbar-left"><img src="/logo/black_logo.png" style='max-width: 62px;'></a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>

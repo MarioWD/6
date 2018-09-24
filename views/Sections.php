@@ -3,7 +3,7 @@
     <hr>
     <div class='row'>
     <?php foreach ($this->sections as $sec) { ?>
-        <div class='col-sm-4 section-panel'>
+        <div class='col-sm-4 section-panel' style='margin-top: 10px;'>
             <span class='thumbnail'><img src='<?=$sec['image']?>'/></span>
             <h4><?=$sec['name']?></h4>
             <form action='' method='post' enctype='multipart/form-data'>
