@@ -43,9 +43,9 @@ class Controller
 		$this->view = $this->page->getShortName();
 		$this->viewable = file_exists(__VIEW__.$this->view.".php");
 		$this->proccessable = file_exists(__PROCESS__.$this->view.".php");
+        $db = Db::getInstance()->rawPDO();
         if (isset($_SESSION['ui-hash']))
         {
-            $db = Db::getInstance()->rawPDO();
             $res = $db->query('SELECT * FROM users WHERE email=\''.$_SESSION['ui-mail'].'\' AND hash=\''.$_SESSION['ui-hash'].'\' AND role=1');
             $res->execute();
             $res = $res->fetch(PDO::FETCH_ASSOC);
@@ -54,6 +54,9 @@ class Controller
                 $this->verify = 1;
             }
         }
+        $res = $db->prepare("SELECT * FROM sections WHERE name=?");
+        $res->execute([$this->view]);
+        $this->banner_data = $res->fetch(PDO::FETCH_ASSOC);
 	}
 	private function loadView()
 	{

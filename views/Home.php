@@ -1,3 +1,19 @@
+<?php if ($this->banner_data) { ?>
+<style>
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("<?=$this->banner_data['image']?>");
+    background-position: center;
+}
+</style>
+<?php } ?>
+<div class='fluid-container'>
+    <div class="hero-image row">
+      <div class="hero-text">
+        <p>6th Sense</p>
+      </div>
+    </div>
+</div>
+<br><br>
 <br><br>
 <div class='container'>
     <h2 id='gal-imgs' style='margin-bottom: -50px;'>Blogs</h2>

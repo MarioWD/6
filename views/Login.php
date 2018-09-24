@@ -1,3 +1,20 @@
+<?php if ($this->banner_data) { ?>
+<style>
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("<?=$this->banner_data['image']?>");
+    background-position: bottom;
+}
+</style>
+<?php } ?>
+<div class='fluid-container'>
+    <div class="hero-image row">
+      <div class="hero-text">
+        <p>Login</p>
+      </div>
+    </div>
+</div>
+<br>
+<br>
 <div class='container'>
     <?php if (isset($this->verify) && !$this->verify) { ?>
     <div class="alert alert-danger alert-dismissible" role="alert" style='margin-bottom: 30px;'>

@@ -3,28 +3,9 @@ body {
     font-weight: normal;
     font-style: normal;
 }   
-.hero-image-blogger {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/banners/blogger-banner.jpeg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-image-login {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/banners/login-banner.jpeg");
-    height: 500px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/IMG_5663.JPG");
     height: 500px;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -168,6 +149,7 @@ body {
 .carousel-inner {
     height: 500px;
 }
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {

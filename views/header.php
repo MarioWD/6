@@ -21,36 +21,6 @@
         </div>
       </div>
     </nav>
-#4F7B8F
 </header>
 <main style='padding-top:50px;'>
-<?php if ($this->view == 'Home') { ?>
-<div class='fluid-container'>
-    <div class="hero-image row">
-      <div class="hero-text">
-        <p>6th Sense Company</p>
-      </div>
-    </div>
-</div>
-<br><br>
-<?php } elseif($this->view == 'Login') { ?>
-<div class='fluid-container'>
-    <div class="hero-image-login row">
-      <div class="hero-text">
-        <p>Login</p>
-      </div>
-    </div>
-</div>
-<br>
-<br>
-<?php } elseif($this->view == 'Blogger') { ?>
-<div class='fluid-container'>
-    <div class="hero-image-blogger row">
-      <div class="hero-text">
-        <p>Blogger</p>
-      </div>
-    </div>
-</div>
-<br>
-<br>
-<?php } ?>
+

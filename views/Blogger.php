@@ -1,3 +1,19 @@
+<?php if ($this->banner_data) { ?>
+<style>
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("<?=$this->banner_data['image']?>");
+    background-position: center;
+}
+</style>
+<?php } ?>
+<div class='fluid-container'>
+    <div class="hero-image row">
+      <div class="hero-text">
+        <p>Blogger</p>
+      </div>
+    </div>
+</div>
+<br><br>
 <div class='container'><h2 id='titlerewrite'>Blog post preview</h2></div>
 <div class="container" id='slideshow_container' style='display:none;'>
     <div id="myCarousel" class="carousel" data-ride="carousel">
