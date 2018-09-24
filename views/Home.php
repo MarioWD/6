@@ -9,7 +9,7 @@
 <div class='fluid-container'>
     <div class="hero-image row">
       <div class="hero-text">
-        <p>6th Sense</p>
+        <img src='/logo/white_logo.png' style='max-width: 100%;'/>
       </div>
     </div>
 </div>
