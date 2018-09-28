@@ -147,7 +147,7 @@ body {
     margin: auto;
 }
 .carousel-inner {
-    height: 500px;
+    max-height: 500px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

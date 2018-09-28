@@ -51,6 +51,7 @@ foreach ($files['name'] as $i => $name)
     {
         $this->setMsg("<strong>$name</strong> is invalid to upload please upload in correct size and format", 'danger');
         header('location: /Blogger/');
+        exit();
     }
     $file_name = $folder.$name;
     $images[] = $file_name;

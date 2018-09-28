@@ -2,12 +2,14 @@
     <h1 class='text-center'><?=$this->blog['title']?></h1>
     <br><br>
     <div id="myCarousel" class="carousel" data-ride="carousel">
+        <?php if ($this->blog_count > 1) { ?>
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <?php for ($i = 0; $i <= $this->blog_count; ++$i) { ?>
+            <?php for ($i = 1; $i <= $this->blog_count; ++$i) { ?>
             <li data-target="#myCarousel" data-slide-to="<?=$i?>" class="<?=$i?'':'active'?>"></li>
             <?php } ?>
         </ol>
+        <?php } ?>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner text-center">
@@ -30,4 +32,12 @@
     </div>
     <br><br>
     <p class='text-center'><?= $this->blog['body']?></p>
+    <br><br>
+    <?php if ($this->verify) { ?>
+    <form method='post' actions='' class='form'>
+        <input type='hidden' name="blog_id" value='<?=$this->get['bi']?>'/>
+        <input type='hidden' name='action' value='delete'/>
+        <input type='submit' class='btn btn-danger' value='Delete' style='display: block;margin: auto;'/>
+    </form>
+    <?php } ?>
 </div>
