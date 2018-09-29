@@ -15,6 +15,7 @@
             <?php if (isset($_SESSION['ui-hash']) && isset($this->verify)) {?>
             <li><a href="/Blogger">Blogs</a></li>
             <li><a href="/Sections">Sections</a></li>
+            <li><a href="/Log_out">Log Out</a></li>
             <?php } else { ?>
             <li><a href="/Login">Login</a></li>
             <?php } ?>

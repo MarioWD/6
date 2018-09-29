@@ -118,7 +118,7 @@ class Controller
 		{
 			foreach($_SESSION["msg"] as $type => $msgs)
 			{ ?>
-                <div class="alert alert-<?=$type?> alert-dismissible" role="alert" style='margin-bottom: 30px;'>
+                <div class="alert alert-<?=$type?> alert-dismissible" role="alert" style='width: 100%;position: fixed; z-index: 999;'>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <?=implode("<br>", $msgs)?>
                 </div>
